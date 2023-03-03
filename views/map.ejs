@@ -10,41 +10,25 @@
   <body>
     <header>
         <h1>The Cube Collective</h1>
-        Welcome to The Cube Collective, we hope you will have a great time!
+        SERVER LIVE MAP <span class="live">●</span>
         <noscript>
             For full functionality you must enable javascript!
         </noscript>
     </header>
     <main>
-        <section id="server">
-            <h2>Server</h2>
-            <code>play.thecubecollective.net</code>
-            <img src="webminecraft.png">
-            <button onclick="copyButton()">
-                COPY URL ⧉
-            </button>
-        </section>
-        <section id="map">
-            <h2>Maps</h2>
-            <code>thecubecollective.net/map</code>
-            <img src="webdynmap.png">
+        <section id="map" class="map-page">
+            <iframe src="/dynmap" title="Map" frameBorder="0"></iframe>
             <div class="button-holder">
-                <button class="map" onclick="window.location.href='/map'">
-                    SERVER LIVE MAP <span class="live">●</span>
+                <button class="map" onclick="window.location.href='/index'">
+                    BACK TO HOMEPAGE
+                </button>
+                <button onclick="window.location.href='/dynmap'">
+                    FULLSCREEN
                 </button>
                 <button class="seed" onclick="window.open('https://www.mcseeder.com/?seed=-3582857765817218416&version=19')">
                     SEED MAP
                 </button>
             </div>
-            <!-- <iframe src="/map" title="Map" frameBorder="0"></iframe> -->
-        </section>
-        <section id="discord">
-            <h2>Discord</h2>
-            <code>Coming soon TM</code>
-            <img src="webdiscord.png">
-            <button>
-                JOIN CHANNEL
-            </button>
         </section>
     </main>
     <footer>

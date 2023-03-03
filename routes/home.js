@@ -13,7 +13,12 @@ router.get("/", (req, res) => {
 });
 
 router.get("/map", (req, res) => {
-    var url = req.url.slice(4);
+    res.render("map.ejs");
+});
+
+router.get("/dynmap", (req, res) => {
+    var url = req.url.slice(7);
+    url = "/" + url;
     console.log("URL = ",url);
     var options = {
         host: 'play.thecubecollective.net',
