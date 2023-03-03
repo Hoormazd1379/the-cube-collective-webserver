@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const favicon = require('serve-favicon')
 
 const mineflayer = require('mineflayer');
 const standaloneViewer = require('prismarine-viewer').standalone
@@ -16,6 +17,7 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));    // parse application/x-www-form-urlencoded
 app.use(express.json({limit: '4MB'}));    // parse application/json
 
+app.use(favicon(path.join(__dirname, 'public','favicon.ico'))); 
 app.use(express.static(path.join(__dirname, 'public'), {index: "index.html"}));
 
 app.use(methodOverride('_method'));
