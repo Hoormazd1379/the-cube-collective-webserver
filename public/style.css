@@ -29,14 +29,17 @@ body {
   justify-content: space-between;
   text-align: center;
 }
+body header {
+  margin: 10px;
+}
 body main {
-  height: 300vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 body main section {
+  margin-top: 5px;
   width: 85vw;
   min-height: 30vw;
   background-color: rgba(10, 10, 10, 0.3);
@@ -46,6 +49,10 @@ body main section {
   border-radius: 25px;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
+}
+body main section img {
+  align-self: center;
+  width: 80%;
 }
 body main #server {
   color: #6af258;
@@ -137,7 +144,7 @@ body footer {
 
 @media all and (min-width: 768px) {
   body main {
-    height: 70vh;
+    height: 65vh;
     flex-direction: row;
   }
   body main section {

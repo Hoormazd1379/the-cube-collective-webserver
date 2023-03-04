@@ -35,14 +35,18 @@ body {
     justify-content: space-between;
     text-align: center;
 
+    header {
+        margin: 10px;
+    }
+
     main {
-        height: 300vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
 
         section {
+            margin-top: 5px;
             width: 85vw;
             min-height: 30vw;
             background-color: rgba(10, 10, 10, 0.3);
@@ -51,6 +55,11 @@ body {
             justify-content: space-between;
             border-radius: 25px;
             backdrop-filter: blur(4px);
+
+            img {
+                align-self: center;
+                width: 80%;
+            }
         }
 
         #server {
@@ -154,7 +163,7 @@ body {
     body {
     
         main {
-            height: 70vh;
+            height: 65vh;
             flex-direction: row;
     
             section {
