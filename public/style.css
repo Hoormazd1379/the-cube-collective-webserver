@@ -41,7 +41,6 @@ body main {
   align-items: center;
 }
 body main section {
-  flex-grow: 1;
   margin-top: 5px;
   width: 85vw;
   height: 100%;
