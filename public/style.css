@@ -62,6 +62,9 @@ body main #server {
   color: #6af258;
   border: 5px outset #6af258;
 }
+body main #server img#status {
+  width: 80%;
+}
 body main #server button {
   font-family: "Minecraft";
   margin: 20px;
