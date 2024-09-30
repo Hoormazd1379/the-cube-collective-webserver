@@ -59,8 +59,8 @@ body main section img {
   width: 80%;
 }
 body main #server {
-  color: #6af258;
-  border: 5px outset #6af258;
+  color: #e29020;
+  border: 5px outset #e29020;
 }
 body main #server img#status {
   width: 80%;
@@ -70,20 +70,20 @@ body main #server button {
   margin: 20px;
   padding: 10px;
   border-radius: 15px;
-  border: 5px outset #6af258;
-  background-color: #6af258;
+  border: 5px outset #e29020;
+  background-color: #e29020;
   color: black;
 }
 body main #server button:hover {
-  background-color: rgba(106, 242, 88, 0.8);
+  background-color: rgba(226, 144, 32, 0.8);
 }
 body main #server button:active {
   background-color: rgba(10, 10, 10, 0.3);
-  color: #6af258;
+  color: #e29020;
 }
 body main #map {
-  color: #58f2b7;
-  border: 5px outset #58f2b7;
+  color: #4f9810;
+  border: 5px outset #4f9810;
 }
 body main #map .button-holder {
   display: flex;
@@ -95,16 +95,16 @@ body main #map .button-holder button {
   font-family: "Minecraft";
   width: 100%;
   padding: 10px;
-  border: 5px outset #58f2b7;
-  background-color: #58f2b7;
+  border: 5px outset #4f9810;
+  background-color: #4f9810;
   color: black;
 }
 body main #map .button-holder button:hover {
-  background-color: rgba(88, 242, 183, 0.8);
+  background-color: rgba(79, 152, 16, 0.8);
 }
 body main #map .button-holder button:active {
   background-color: rgba(10, 10, 10, 0.3);
-  color: #58f2b7;
+  color: #4f9810;
 }
 body main #map .button-holder button.map {
   border-radius: 15px 0 0 15px;

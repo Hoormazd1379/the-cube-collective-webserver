@@ -1,3 +1,7 @@
+$server-color: #e29020;
+$map-color: #4f9810;
+$discord-color: #5865F2;
+
 @font-face {
     font-family: 'Minecraft';
     src: url('Minecraft.eot');
@@ -67,8 +71,8 @@ body {
         }
 
         #server {
-            color: #6af258;
-            border: 5px outset #6af258;
+            color: $server-color;
+            border: 5px outset $server-color;
             img#status{
                 width: 80%;
             }
@@ -77,22 +81,22 @@ body {
                 margin: 20px;
                 padding: 10px;
                 border-radius: 15px;
-                border: 5px outset #6af258;
-                background-color: #6af258;
+                border: 5px outset $server-color;
+                background-color: $server-color;
                 color: black;
                 &:hover{
-                    background-color: rgba(#6af258, 0.8);
+                    background-color: rgba($server-color, 0.8);
                 }
                 &:active{
                     background-color: rgba(10, 10, 10, 0.3);
-                    color: #6af258;
+                    color: $server-color;
                 }
             }
         }
         
         #map {
-            color: #58f2b7;
-            border: 5px outset #58f2b7;
+            color: $map-color;
+            border: 5px outset $map-color;
             .button-holder{
                 display: flex;
                 flex-direction: row;
@@ -102,15 +106,15 @@ body {
                     font-family: 'Minecraft';
                     width: 100%;
                     padding: 10px;
-                    border: 5px outset #58f2b7;
-                    background-color: #58f2b7;
+                    border: 5px outset $map-color;
+                    background-color: $map-color;
                     color: black;
                     &:hover{
-                        background-color: rgba(#58f2b7, 0.8);
+                        background-color: rgba($map-color, 0.8);
                     }
                     &:active{
                         background-color: rgba(10, 10, 10, 0.3);
-                        color: #58f2b7;
+                        color: $map-color;
                     }
                 }
                 button.map {
@@ -124,22 +128,22 @@ body {
         }
         
         #discord{
-            color: #5865F2;
-            border: 5px outset #5865F2;
+            color: $discord-color;
+            border: 5px outset $discord-color;
             button{
                 font-family: 'Minecraft';
                 margin: 20px;
                 padding: 10px;
                 border-radius: 15px;
-                border: 5px outset #5865F2;
-                background-color: #5865F2;
+                border: 5px outset $discord-color;
+                background-color: $discord-color;
                 color: black;
                 &:hover{
-                    background-color: rgba(#5865F2, 0.8);
+                    background-color: rgba($discord-color, 0.8);
                 }
                 &:active{
                     background-color: rgba(10, 10, 10, 0.3);
-                    color: #5865F2;
+                    color: $discord-color;
                 }
             }
         }
