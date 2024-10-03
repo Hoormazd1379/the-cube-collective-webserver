@@ -77,6 +77,53 @@
             </div>
         </section>
     </main>
+    <section class="serverinfo">
+        <h2>Server info</h2>
+        <table class="server-table">
+            <tr>
+                <td class="label">Status</td>
+                <td class="value <%= mcData.online ? 'status-online' : 'status-offline' %>"><%= mcData.online ? 'Online' : 'Offline' %></td>
+            </tr>
+            <tr>
+                <td class="label">Host</td>
+                <td class="value"><%= mcData.host %></td>
+            </tr>
+            <tr>
+                <td class="label">Port</td>
+                <td class="value"><%= mcData.port %></td>
+            </tr>
+            <tr>
+                <td class="label">Icon</td>
+                <td class="value"><img src="<%= mcData.icon %>" alt="Server Icon" class="icon"></td>
+            </tr>
+            <tr>
+                <td class="label">MOTD</td>
+                <td class="value motd"><%- mcData.motd.html.replace(/\n/g, "<br>") %></td>
+            </tr>
+            <tr>
+                <td class="label">Version</td>
+                <td class="value"><%= mcData.version.name_clean %></td>
+            </tr>
+            <tr>
+                <td class="label">Players</td>
+                <td class="value"><%= mcData.players.online %> / <%= mcData.players.max %></td>
+            </tr>
+            <tr>
+                <td class="label">Player List</td>
+                <td class="value">
+                    <% if (mcData.players.list.length > 0) { %>
+                        <ul>
+                        <% mcData.players.list.forEach(player => { %>
+                            <li><%= player.name_clean %></li>
+                        <% }); %>
+                        </ul>
+                    <% } else { %>
+                        <span>No players online</span>
+                    <% } %>
+                </td>
+            </tr>
+        </table>
+    </section>
     <footer>
         <p>The Cube Collective</p>
         <!-- <img id="status" src="http://status.mclive.eu/The Cube Collective Network/play.thecubecollective.net/25565/banner.png"> -->
