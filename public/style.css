@@ -22,7 +22,6 @@ body {
   margin: 0;
   width: 100vw;
   min-height: 100vh;
-  max-width: 100vw;
   background-image: url("dirt.png");
   color: white;
   display: flex;
@@ -41,7 +40,6 @@ body main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  max-width: 100vw;
 }
 body main section {
   margin-top: 5px;
