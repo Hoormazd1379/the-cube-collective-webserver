@@ -201,9 +201,9 @@ body .serverinfo {
   border-radius: 25px;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  color: #cce076;
-  border: 5px outset #cce076;
-  background-color: rgba(204, 224, 118, 0.06);
+  color: #f3e54e;
+  border: 5px outset #f3e54e;
+  background-color: rgba(243, 229, 78, 0.06);
 }
 body .serverinfo .server-table {
   width: 100%;
@@ -213,7 +213,7 @@ body .serverinfo .server-table .label {
   text-align: left;
   padding: 8px;
   font-weight: bold;
-  color: #cce076;
+  color: #f3e54e;
 }
 body .serverinfo .server-table .value {
   text-align: left;
@@ -232,10 +232,10 @@ body .serverinfo .server-table img.icon {
   border-radius: 5px;
 }
 body .serverinfo .server-table tr:nth-child(odd) {
-  background-color: rgba(204, 224, 118, 0.16);
+  background-color: rgba(243, 229, 78, 0.16);
 }
 body .serverinfo .server-table tr:nth-child(even) {
-  background-color: rgba(204, 224, 118, 0.06);
+  background-color: rgba(243, 229, 78, 0.06);
 }
 body footer {
   display: flex;
