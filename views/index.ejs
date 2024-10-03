@@ -114,7 +114,10 @@
                     <% if (mcData.players.list.length > 0) { %>
                         <ul>
                         <% mcData.players.list.forEach(player => { %>
-                            <li><%= player.name_clean %></li>
+                            <li>
+                                <img src="https://api.mineatar.io/head/<%= player.uuid %>?scale=16" alt="<%= player.name_clean %>'s head" class="player-head">
+                                <%= player.name_clean %>
+                            </li>
                         <% }); %>
                         </ul>
                     <% } else { %>

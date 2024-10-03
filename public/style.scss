@@ -282,10 +282,17 @@ body {
                 border-radius: 5px;
             }
 
+            .player-head {
+                width: 24px;
+                height: 24px;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+
             tr:nth-child(odd) {
                 background-color: rgba($serverinfo-color, 0.16);
             }
-            
+
             tr:nth-child(even) {
                 background-color: rgba($serverinfo-color, 0.06);
             }
@@ -315,6 +322,7 @@ body {
 
             section {
                 width: 22vw;
+
                 img {
                     width: 80%;
                 }

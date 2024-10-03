@@ -231,6 +231,12 @@ body .serverinfo .server-table img.icon {
   height: 40px;
   border-radius: 5px;
 }
+body .serverinfo .server-table .player-head {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
 body .serverinfo .server-table tr:nth-child(odd) {
   background-color: rgba(243, 229, 78, 0.16);
 }
