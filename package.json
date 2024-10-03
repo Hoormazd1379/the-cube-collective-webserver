@@ -16,7 +16,7 @@
     "fs-extra": "^11.1.0",
     "gitignore": "^0.7.0",
     "method-override": "^3.0.0",
-    "mineflayer": "^4.8.1",
+    "mineflayer": "^4.20.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.7",
     "prismarine-viewer": "^1.23.0",
