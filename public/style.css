@@ -20,7 +20,7 @@ noscript {
 body {
   font-family: "Minecraft";
   margin: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-image: url("dirt.png");
   color: white;
@@ -45,6 +45,7 @@ body main section {
   margin-top: 5px;
   width: 85vw;
   max-width: 924px;
+  max-height: 500px;
   background-color: rgba(2, 2, 2, 0.3);
   display: flex;
   flex-direction: column;
@@ -241,10 +242,10 @@ body footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  width: 100vw;
+  width: 100%;
 }
 
-@media all and (min-width: 1270px) {
+@media all and (min-width: 768px) {
   body {
     align-items: stretch;
   }

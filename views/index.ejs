@@ -27,7 +27,7 @@
         <section id="map">
             <h2>Maps</h2>
             <img src="webdynmap.png">
-            <code>https://thecubecollective.net/map</code>
+            <code>thecubecollective.net/map</code>
             <div class="button-holder">
                 <button class="map" onclick="window.location.href='/map'">
                     LIVE MAP <span class="live">●</span>
@@ -41,7 +41,7 @@
         <section id="discord">
             <h2>Discord</h2>
             <img src="webdiscord.png">
-            <code>https://discord.gg/qgnbRemYPz</code>
+            <code>discord.gg/qgnbRemYPz</code>
             <button onclick="window.open('https://discord.gg/qgnbRemYPz')">
                 JOIN CHANNEL
             </button>
@@ -78,7 +78,7 @@
         </section>
     </main>
     <section class="serverinfo">
-        <h2>Server info</h2>
+        <h2>Live Server info</h2>
         <table class="server-table">
             <tr>
                 <td class="label">Status</td>
@@ -105,11 +105,11 @@
                 <td class="value"><%= mcData.version.name_clean %></td>
             </tr>
             <tr>
-                <td class="label">Players</td>
+                <td class="label">Online Players</td>
                 <td class="value"><%= mcData.players.online %> / <%= mcData.players.max %></td>
             </tr>
             <tr>
-                <td class="label">Player List</td>
+                <td class="label">Online Player List</td>
                 <td class="value">
                     <% if (mcData.players.list.length > 0) { %>
                         <ul>
