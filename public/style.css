@@ -66,6 +66,7 @@ body main .map-page {
 body main #server {
   color: #e29020;
   border: 5px outset #e29020;
+  background-color: rgba(226, 144, 32, 0.06);
 }
 body main #server img#status {
   width: 80%;
@@ -83,12 +84,13 @@ body main #server button:hover {
   background-color: rgba(226, 144, 32, 0.8);
 }
 body main #server button:active {
-  background-color: rgba(10, 10, 10, 0.3);
+  background-color: rgba(226, 144, 32, 0.06);
   color: #e29020;
 }
 body main #map {
   color: #4f9810;
   border: 5px outset #4f9810;
+  background-color: rgba(79, 152, 16, 0.06);
 }
 body main #map .button-holder {
   display: flex;
@@ -108,7 +110,7 @@ body main #map .button-holder button:hover {
   background-color: rgba(79, 152, 16, 0.8);
 }
 body main #map .button-holder button:active {
-  background-color: rgba(10, 10, 10, 0.3);
+  background-color: rgba(79, 152, 16, 0.06);
   color: #4f9810;
 }
 body main #map .button-holder button.map {
@@ -120,6 +122,7 @@ body main #map .button-holder button.seed {
 body main #discord {
   color: #5865F2;
   border: 5px outset #5865F2;
+  background-color: rgba(88, 101, 242, 0.06);
 }
 body main #discord button {
   font-family: "Minecraft";
@@ -134,12 +137,13 @@ body main #discord button:hover {
   background-color: rgba(88, 101, 242, 0.8);
 }
 body main #discord button:active {
-  background-color: rgba(10, 10, 10, 0.3);
+  background-color: rgba(88, 101, 242, 0.06);
   color: #5865F2;
 }
 body main #members {
   color: #1a9fc0;
   border: 5px outset #1a9fc0;
+  background-color: rgba(26, 159, 192, 0.06);
 }
 body main #members .memberlist {
   display: flex;

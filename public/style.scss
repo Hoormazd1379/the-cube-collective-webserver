@@ -80,6 +80,7 @@ body {
         #server {
             color: $server-color;
             border: 5px outset $server-color;
+            background-color: rgba($server-color, 0.06);
             img#status{
                 width: 80%;
             }
@@ -95,7 +96,7 @@ body {
                     background-color: rgba($server-color, 0.8);
                 }
                 &:active{
-                    background-color: rgba(10, 10, 10, 0.3);
+                    background-color: rgba($server-color, 0.06);
                     color: $server-color;
                 }
             }
@@ -104,6 +105,7 @@ body {
         #map {
             color: $map-color;
             border: 5px outset $map-color;
+            background-color: rgba($map-color, 0.06);
             .button-holder{
                 display: flex;
                 flex-direction: row;
@@ -120,7 +122,7 @@ body {
                         background-color: rgba($map-color, 0.8);
                     }
                     &:active{
-                        background-color: rgba(10, 10, 10, 0.3);
+                        background-color: rgba($map-color, 0.06);
                         color: $map-color;
                     }
                 }
@@ -137,6 +139,7 @@ body {
         #discord{
             color: $discord-color;
             border: 5px outset $discord-color;
+            background-color: rgba($discord-color, 0.06);
             button{
                 font-family: 'Minecraft';
                 margin: 20px;
@@ -149,7 +152,7 @@ body {
                     background-color: rgba($discord-color, 0.8);
                 }
                 &:active{
-                    background-color: rgba(10, 10, 10, 0.3);
+                    background-color: rgba($discord-color, 0.06);
                     color: $discord-color;
                 }
             }
@@ -158,7 +161,7 @@ body {
         #members{
             color: $members-color;
             border: 5px outset $members-color;
-            
+            background-color: rgba($members-color, 0.06);
             .memberlist {
                 display: flex;
                 flex-direction: row;
