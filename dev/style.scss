@@ -2,7 +2,7 @@ $server-color: #e29020;
 $map-color: #4f9810;
 $discord-color: #5865F2;
 $members-color: #1a9fc0;
-$serverinfo-color: #f3e54e;
+$serverinfo-color: #FFBF00;
 
 @font-face {
     font-family: 'Minecraft';
@@ -61,7 +61,7 @@ body {
             margin-top: 5px;
             width: 85vw;
             max-width: 924px;
-            max-height: 500px;
+            max-height: 380px;
             background-color: rgba(2, 2, 2, 0.3);
             display: flex;
             flex-direction: column;
