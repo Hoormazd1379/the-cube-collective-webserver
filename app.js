@@ -4,8 +4,8 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 const favicon = require('serve-favicon')
 
-const mineflayer = require('mineflayer');
-const standaloneViewer = require('prismarine-viewer').standalone
+// const mineflayer = require('mineflayer');
+// const standaloneViewer = require('prismarine-viewer').standalone
 const { Vec3 } = require('vec3')
 
 const fs = require('fs-extra');
