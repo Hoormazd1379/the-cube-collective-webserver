@@ -69,6 +69,11 @@ body {
             border-radius: 25px;
             backdrop-filter: blur(4px);
 
+            img {
+                align-self: center;
+                width: 50%;
+            }
+
             div.img {
                 align-self: center;
                 width: 80%;
