@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Cube Collective</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <h1>The Cube Collective</h1>
+        Welcome to The Cube Collective, we hope you will have a great time!
+        <noscript>
+            For full functionality you must enable javascript!
+        </noscript>
+    </header>
+    <main>
+        <section id="server">
+            <h2>Server</h2>
+            <div class="img"></div>
+            <code>play.thecubecollective.net</code>
+            <button onclick="copyButton()">
+                COPY URL ⧉
+            </button>
+        </section>
+        <section id="map">
+            <h2>Maps</h2>
+            <div class="img"></div>
+            <code>thecubecollective.net/map</code>
+            <div class="button-holder">
+                <button class="map" onclick="window.location.href='/map'">
+                    LIVE MAP <span class="live">●</span>
+                </button>
+                <button class="seed" onclick="window.open('https://www.chunkbase.com/apps/seed-map#seed=1757404403610633549&platform=java_1_21&dimension=overworld')">
+                    SEED MAP
+                </button>
+            </div>
+            <!-- <iframe src="/map" title="Map" frameBorder="0"></iframe> -->
+        </section>
+        <section id="discord">
+            <h2>Discord</h2>
+            <div class="img"></div>
+            <code>discord.gg/qgnbRemYPz</code>
+            <button onclick="window.open('https://discord.gg/qgnbRemYPz')">
+                JOIN CHANNEL
+            </button>
+        </section>
+
+        <section id="members">
+            <h2>SMP Members</h2>
+            <div class="memberlist">
+                <div class="player">
+                    <img src="https://mc-heads.net/body/Violetborne" alt="Violetborne's Head">
+                    <p class="op">Violetborne</p>
+                </div>
+                <div class="player">
+                    <img src="https://mc-heads.net/body/itsHoormazd" alt="itsHoormazd's Head">
+                    <p>itsHoormazd</p>
+                </div>
+                <div class="player">
+                    <img src="https://mc-heads.net/body/TheRealComie" alt="TheRealComie's Head">
+                    <p>TheRealComie</p>
+                </div>
+                <div class="player">
+                    <img src="https://mc-heads.net/body/Khaey" alt="Khaey's Head">
+                    <p>Khaey</p>
+                </div>
+                <div class="player">
+                    <img src="https://mc-heads.net/body/wii452life" alt="wii452life's Head">
+                    <p>wii452life</p>
+                </div>
+                <div class="player">
+                    <img src="https://mc-heads.net/body/Aysushka" alt="Aysushka's Head">
+                    <p>Aysushka</p>
+                </div>
+            </div>
+
+            <div class="memberfooter">
+                Apply to join on Discord
+            </div>
+        </section>
+    </main>
+    <section class="serverinfo">
+        <h2>Server info</h2>
+        <table class="server-table">
+            <tr>
+                <td class="label">Status</td>
+                <td class="value <%= mcData.online ? 'status-online' : 'status-offline' %>"><%= mcData.online ? 'Online' : 'Offline' %></td>
+            </tr>
+            <tr>
+                <td class="label">Host</td>
+                <td class="value"><%= mcData.host %></td>
+            </tr>
+            <tr>
+                <td class="label">Port</td>
+                <td class="value"><%= mcData.port %></td>
+            </tr>
+            <tr>
+                <td class="label">Icon</td>
+                <td class="value"><img src="<%= mcData.icon %>" alt="Server Icon" class="icon"></td>
+            </tr>
+            <tr>
+                <td class="label">MOTD</td>
+                <td class="value motd"><%- mcData.motd.html.replace(/\n/g, "<br>") %></td>
+            </tr>
+            <tr>
+                <td class="label">Version</td>
+                <td class="value"><%= mcData.version.name_clean %></td>
+            </tr>
+            <tr>
+                <td class="label">Online Players</td>
+                <td class="value"><%= mcData.players.online %> / <%= mcData.players.max %></td>
+            </tr>
+            <tr>
+                <td class="label">Online Player List</td>
+                <td class="value">
+                    <% if (mcData.players.list.length > 0) { %>
+                        <ul>
+                        <% mcData.players.list.forEach(player => { %>
+                            <li>
+                                <img src="https://api.mineatar.io/head/<%= player.uuid %>?scale=16" alt="<%= player.name_clean %>'s head" class="player-head">
+                                <%= player.name_clean %>
+                            </li>
+                        <% }); %>
+                        </ul>
+                    <% } else { %>
+                        <span>No players online</span>
+                    <% } %>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <p>The Cube Collective</p>
+        <!-- <img id="status" src="http://status.mclive.eu/The Cube Collective Network/play.thecubecollective.net/25565/banner.png"> -->
+        <p>play.thecubecollective.net</p>
+        <p>©2023, Hoormazd</p>
+    </footer>
+    <script>
+        function copyButton() {
+            var copyText = "play.thecubecollective.net";
+            navigator.clipboard.writeText(copyText);
+        }
+    </script>
+  </body>
+</html>

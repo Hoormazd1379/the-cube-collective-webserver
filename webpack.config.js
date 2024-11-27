@@ -4,8 +4,8 @@ const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
 
 module.exports = {
   entry: {
-    // 'script': './dev/script.js',
     'style': './dev/style.scss',
+    'new': './dev/new.scss',
   },
   module: {
     rules: [
@@ -41,7 +41,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new IgnoreEmitPlugin(['style.js'])
+    new IgnoreEmitPlugin(['style.js', 'new.js'])
   ],
   output: {
     filename: '[name].js',
