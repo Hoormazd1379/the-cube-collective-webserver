@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Minecraft';
+    src: url('Minecraft.eot');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minecraft';
+    src: local('Minecraft'),
+        url('Minecraft.ttf') format('truetype'),
+        url('Minecraft.svg#Minecraft') format('svg');
+    font-style: normal;
+    font-display: swap;
+}
+
+// Typography
+$font-family-body: 'Space Grotesk',
+sans-serif; // For regular text
+$font-family-heading: 'Minecraft',
+sans-serif; // For headlines and standout text

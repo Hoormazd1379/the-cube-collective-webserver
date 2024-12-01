@@ -32,7 +32,21 @@ router.get("/map", (req, res) => {
 });
 
 router.get("/index", (req, res) => {
-    res.render("index.ejs");
+    axios.get("https://api.mcstatus.io/v2/status/java/play.thecubecollective.net")
+        .then(apiResponse => {
+            // Extract the data from the API response
+            const mcData = apiResponse.data;
+
+            // Render the index.ejs view, passing the Minecraft server data
+            res.render("index.ejs", { mcData });
+        })
+        .catch(error => {
+            // Handle any errors
+            console.error("Error fetching Minecraft status:", error);
+
+            // Optionally, pass an error message or default data to the view
+            res.render("index.ejs", { mcData: null, error: "Unable to fetch server data" });
+        });
 });
 
 router.get("/dynmap", (req, res) => {

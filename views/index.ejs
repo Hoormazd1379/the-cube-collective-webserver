@@ -1,31 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Cube Collective</title>
+  <title>TheCubeCollective</title>
   <link rel="stylesheet" href="new.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body id="cube-collective">
-  <div class="cube-header">
-    <h1>The Cube Collective</h1>
-    <p>Where Adventures Begin and Legends Are Made</p>
-  </div>
-  <div class="cube-container">
-    <div class="cube-section cube-minecraft" id="cube-minecraft">
-      <div class="cube-content">
-        <div class="cube-logo minecraft-logo"></div>
-        <p>Explore endless possibilities in our Minecraft world!</p>
-        <a href="/minecraft" class="cube-button">Discover</a>
-      </div>
+
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <a href="/">TheCubeCollective</a>
+      <div class="welcome-banner" id="welcome-banner"></div>
     </div>
-    <div class="cube-section cube-enshrouded" id="cube-enshrouded">
-      <div class="cube-content">
-        <div class="cube-logo enshrouded-logo"></div>
-        <p>Survive and thrive in the mysterious Enshrouded universe!</p>
-        <a href="/enshrouded" class="cube-button">Coming Soon</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#welcome">Welcome</a></li>
+        <li>/</li>
+        <li><a href="#servers">Servers</a></li>
+        <li>/</li>
+        <li><a href="#community">Community</a></li>
+        <li>/</li>
+        <li><a href="#discord">Discord</a></li>
+        <li>/</li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section id="welcome" class="welcome-section">
+      <div class="side-title">Welcome</div>
+      <div class="section-content highlight">
+        <h2>Welcome to TheCubeCollective</h2>
+        <p>Welcome to TheCubeCollective, a diverse and passionate gaming community where players from around the globe come together to enjoy Minecraft and Enshrouded. Whether you're an experienced player or just starting your journey, there's a place for you here.</p>
+        <p>Join our servers, participate in community events, and meet like-minded gamers. Our goal is to create an inclusive and respectful space where we can build, explore, and have fun together. Welcome aboard!</p>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <section id="servers" class="servers-section">
+      <div class="side-title">Servers</div>
+      <div class="section-content">
+        <h2>Our Servers</h2>
+        <p>Join us on our Minecraft and Enshrouded servers for countless adventures and a top-tier gaming experience.</p>
+        <p>Our servers are well-maintained, ensuring smooth gameplay for everyone. Our moderators and administrators are always available to assist and ensure a positive experience for all players.</p>
+        <div class="server-list">
+          <article class="server">
+            <div class="server-logo minecraft-logo"></div>
+            <p>Join our Minecraft server for community-driven gameplay and events. Participate in building projects, survival challenges, and mini-games. We're currently in our fifth season, titled "Campus Block Party," offering new opportunities to create and explore together.</p>
+            <div class="sub-section-container">
+              <div class="sub-section server-info">
+                <h4>Server Info</h4>
+                  <div class="img"></div>
+                  <code>play.thecubecollective.net</code>
+                  <button onclick="copyButton()">
+                    COPY URL ⧉
+                  </button>
+              </div>
+              <div class="sub-section live-map">
+                <h4>Maps</h4>
+                  <div class="img"></div>
+                  <code>thecubecollective.net/map</code>
+                  <div class="button-holder">
+                    <button class="map" onclick="window.location.href='/map'">
+                      LIVE MAP <span class="live">●</span>
+                    </button>
+                    <button class="seed"
+                      onclick="window.open('https://www.chunkbase.com/apps/seed-map#seed=1757404403610633549&platform=java_1_21&dimension=overworld')">
+                      SEED MAP
+                    </button>
+              </div>
+              </div>
+              <div class="sub-section status">
+                <h4>Status</h4>
+                  <table class="server-table">
+                    <tr>
+                      <td class="label">Status</td>
+                      <td class="value <%= mcData.online ? 'status-online' : 'status-offline' %>">
+                        <%= mcData.online ? 'Online' : 'Offline' %></td>
+                    </tr>
+                    <tr>
+                      <td class="label">Host</td>
+                      <td class="value"><%= mcData.host %></td>
+                    </tr>
+                    <tr>
+                      <td class="label">Port</td>
+                      <td class="value"><%= mcData.port %></td>
+                    </tr>
+                    <tr>
+                      <td class="label">Icon</td>
+                      <td class="value"><img src="<%= mcData.icon %>" alt="Server Icon" class="icon"></td>
+                    </tr>
+                    <tr>
+                      <td class="label">MOTD</td>
+                      <td class="value motd"><%- mcData.motd.html.replace(/\n/g, "<br>") %></td>
+                    </tr>
+                    <tr>
+                      <td class="label">Version</td>
+                      <td class="value"><%= mcData.version.name_clean %></td>
+                    </tr>
+                    <tr>
+                      <td class="label">Online Players</td>
+                      <td class="value"><%= mcData.players.online %> / <%= mcData.players.max %></td>
+                    </tr>
+                  </table>
+              </div>
+            </div>
+          </article>
+          <article class="server">
+            <div class="server-logo enshrouded-logo"></div>
+            <p>Get ready for the Enshrouded server! Work together with other players to uncover hidden treasures, complete quests, and build a thriving community. The Enshrouded server offers a unique and immersive adventure.</p>
+            <div class="sub-section-container">
+              <div class="sub-section enshrouded-info">
+                <h4>Exciting News!</h4>
+                <p>Our Enshrouded server is launching soon and is currently undergoing testing. Stay tuned for an epic adventure filled with challenges and fun!</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="discord" class="discord-section">
+      <div class="side-title">Discord</div>
+      <div class="section-content">
+        <h2>Join Our Discord</h2>
+        <p>Stay connected with our community on Discord! Join discussions, participate in events, and get the latest updates.</p>
+        <p>Our Discord server is the central hub for our community—chat with other members, receive important announcements, and join voice channels for in-game coordination.</p>
+        <a href="https://discord.gg/qgnbRemYPz" target="_blank" class="discord-link">Join Our Discord Server</a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="side-title">About</div>
+      <div class="section-content">
+        <h2>About Us</h2>
+        <p>TheCubeCollective is a passionate gaming community that brings people together to enjoy Minecraft and Enshrouded. Founded by gamers for gamers, we focus on providing a welcoming and inclusive environment for players of all skill levels.</p>
+        <p>We believe in the power of community and the joy of shared experiences. Whether you're here to compete, collaborate, or just have fun, you'll find a place at TheCubeCollective.</p>
+        <div class="memberlist">
+          <div class="player">
+            <img src="https://mc-heads.net/body/Violetborne" alt="Violetborne's Head">
+            <p class="op">Violetborne</p>
+          </div>
+          <div class="player">
+            <img src="https://mc-heads.net/body/itsHoormazd" alt="itsHoormazd's Head">
+            <p>itsHoormazd</p>
+          </div>
+          <div class="player">
+            <img src="https://mc-heads.net/body/TheRealComie" alt="TheRealComie's Head">
+            <p>TheRealComie</p>
+          </div>
+          <div class="player">
+            <img src="https://mc-heads.net/body/Khaey" alt="Khaey's Head">
+            <p>Khaey</p>
+          </div>
+          <div class="player">
+            <img src="https://mc-heads.net/body/wii452life" alt="wii452life's Head">
+            <p>wii452life</p>
+          </div>
+          <div class="player">
+            <img src="https://mc-heads.net/body/Aysushka" alt="Aysushka's Head">
+            <p>Aysushka</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <%= new Date().getFullYear() %> TheCubeCollective. All rights reserved.</p>
+    <p>Made by Hoormazd</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const splashTexts = [
+        "Hey there, gamer!",
+        "Welcome, hero!",
+        "May the blocks be with you!",
+        "It's dangerous to go alone!",
+        "Press Start to join!",
+        "Achievement unlocked: Joined!",
+        "Creeper? Aww man!",
+        "You shall not pass... without fun!",
+        "Keep calm and game on!",
+        "To infinity and beyond!",
+        "Live long and prosper!",
+        "The cake is a lie!",
+        "Winter is coming!",
+        "I am Groot!",
+        "Wubba lubba dub dub!",
+        "Bazinga!",
+        "Expecto Patronum!",
+        "Wingardium Leviosa!",
+        "Why so serious?",
+        "I'm Batman!",
+        "Hasta la vista, baby!",
+        "I'll be back!",
+        "Say hello to my little friend!",
+        "Here's looking at you, kid!",
+        "You can't handle the truth!",
+        "Houston, we have a problem!",
+        "E.T. phone home!",
+        "I'm the king of the world!",
+        "You're gonna need a bigger boat!",
+        "I see dead people!",
+        "Elementary, my dear Watson!",
+        "Just keep swimming!",
+        "Hakuna Matata!",
+        "To infinity and beyond!",
+        "There's no place like home!",
+        "May the Force be with you!",
+        "You're a wizard, Harry!",
+        "I solemnly swear I am up to no good!",
+        "Mischief managed!",
+        "Inconceivable!",
+        "As you wish!",
+        "My precious!",
+        "You shall not pass!",
+        "One does not simply walk into Mordor!",
+        "Fly, you fools!",
+        "It's a trap!",
+        "I find your lack of faith disturbing!",
+        "Do or do not, there is no try!",
+        "I am your father!",
+        "Help me, Obi-Wan Kenobi!",
+        "Use the Force, Luke!",
+        "The Force will be with you, always!",
+        "I have a bad feeling about this!",
+        "It's over 9000!",
+        "Kamehameha!",
+        "Gotta catch 'em all!",
+        "Pikachu, I choose you!",
+        "I am Iron Man!",
+        "Avengers, assemble!",
+        "Hulk smash!",
+        "I can do this all day!",
+        "Wakanda forever!",
+        "I am inevitable!",
+        "I am Groot!",
+        "We are Groot!",
+        "I'm Mary Poppins, y'all!",
+        "I'm the dude, man!",
+        "The Dude abides!",
+        "You're killing me, Smalls!",
+        "There's no crying in baseball!",
+        "Show me the money!",
+        "You had me at hello!",
+        "You can't handle the truth!",
+        "I'll have what she's having!",
+        "Here's Johnny!",
+        "I see dead people!",
+        "They're here!",
+        "I am your father!",
+        "No, I am your father!",
+        "Luke, I am your father!",
+        "I am the one who knocks!",
+        "Say my name!",
+        "Dovahkiin! Dovahkiin!",
+        "Fus Ro Dah!",
+        "Praise the Sun!",
+        "Dark Souls? More like Bright Souls!",
+        "Would you kindly?",
+        "War... War never changes.",
+        "Finish him!",
+        "Get over here!",
+        "Fatality!",
+        "The princess is in another castle!",
+        "All your base are belong to us!",
+        "Snake? Snake! SNAAAAKE!",
+        "Nothing is true, everything is permitted.",
+        "Stay awhile and listen!",
+        "Hell, it's about time.",
+        "This is fine.",
+        "Don't make me tap the sign.",
+        "Oh, hi Mark!",
+        "Do a barrel roll!",
+        "Objection!",
+        "Is this a pigeon?",
+        "Big mood!",
+        "This is the way.",
+        "Execute Order 66!",
+        "That wizard came from the moon!",
+        "Who you gonna call?",
+        "I'm not locked in here with you!",
+        "It's-a me, Mario!",
+        "It's dangerous to go alone. Take this!",
+        "This is Sparta!",
+        "Get schwifty!",
+        "I don't feel so good...",
+        "Yare yare daze.",
+        "ZA WARUDO!",
+        "No gods or kings, only man.",
+        "You were almost a Jill sandwich!",
+        "SEGA!",
+        "Wake me when you need me.",
+        "Finish the fight.",
+        "We're in the endgame now.",
+        "Just Monika.",
+        "I should go.",
+        "Hadouken!",
+        "Shoryuken!",
+        "One winged angel intensifies!",
+        "A wild player appears!",
+        "It's super effective!",
+        "Critical hit!",
+        "GG EZ.",
+        "Victory Royale!",
+        "GLaDOS is watching you!",
+        "Remember, no Russian.",
+        "Would you like to know more?",
+        "Prepare for unforeseen consequences!",
+        "Rise and shine, Mr. Freeman.",
+        "It's not a bug, it's a feature!",
+        "You can't park there!",
+        "Leeroy Jenkins!",
+        "More dots! More dots!",
+        "Stop poking me!",
+        "The Lich King awaits...",
+        "You require additional pylons.",
+        "My life for Aiur!",
+        "Work work!",
+        "Zug zug.",
+        "Do you smell what the Rock is cooking?",
+        "Stay frosty!",
+        "Not all those who wander are lost.",
+        "Shiny, let's be bad guys!",
+        "The cake is definitely still a lie.",
+        "You rolled a natural 20!",
+        "Critical failure!",
+        "The odds were never in your favor.",
+        "Victory is mine!",
+        "And I took that personally.",
+        "You've met with a terrible fate, haven't you?",
+        "Hey! Listen!",
+        "Welcome to the Velvet Room.",
+        "You're breathtaking!",
+        "The last of the Starks...",
+        "I can do that, but it'll cost you.",
+        "Get good!",
+        "Wouldn't you like to play a game?",
+        "You're in for a scare!",
+        "X never, ever marks the spot.",
+        "Red leader, standing by!",
+        "We’re gonna need more slimes!",
+        "They’re taking the hobbits to Isengard!",
+        "Not today, Satan!",
+        "I’ve made a huge mistake.",
+        "Tiny Tina approves!",
+        "Don’t trust the skull kid.",
+        "Another settlement needs your help!",
+        "Pip-Boy activated!",
+        "Vault-Tec approved!",
+        "Pick a card, any card!",
+        "Insert coin to continue.",
+        "It’s-a Luigi time!",
+        "The numbers, Mason! What do they mean?",
+        "Finish the sentence, Drake.",
+        "Toasty!",
+        "Shepard-Commander!",
+        "Do a 360 no-scope!",
+        "The hero of time has logged in!",
+        "You’ve been visited by the Loot Goblin!",
+        "Caution: May contain loot boxes.",
+        "Ssssss... BOOM!",
+        "Chaos is a ladder.",
+        "Where we’re going, we don’t need roads.",
+        "You win or you respawn.",
+        "Power overwhelming!",
+        "Wouldn’t you prefer a good game of chess?",
+        "Achievement unlocked: Fun detected!",
+        "I have spoken.",
+        "Requiescat in pace.",
+        "Remember the Alamo!",
+        "You have died of dysentery.",
+        "Time to tip the scales!",
+        "Prepare your body.",
+        "I see you’re a gamer of culture as well.",
+        "Player 2 has entered the game.",
+        "Loading... forever!",
+        "Snake? SNAAAAKE!",
+        "Born to be wild!",
+        "Insert witty comment here.",
+        "Chilling in creative mode.",
+        "First blood!",
+        "Game saved!",
+        "Let’s split up, gang!",
+        "It’s clobberin’ time!",
+        "All systems nominal.",
+        "Respawn point set!",
+        "Roll for initiative!",
+        "Keep inventory is off!",
+        "Take an arrow to the knee!",
+        "Always bring a bucket.",
+        "Survival of the fittest!",
+        "Never dig straight down!",
+        "Ganking in progress...",
+        "Game over, man. Game over!",
+        "Maximum overdrive activated!",
+        "Time for some friendly fire!",
+        "It’s raining XP!",
+        "Friendly reminder: This is fine.",
+        "Who needs ladders anyway?",
+        "Does it spark joy?",
+        "Trust no one, not even the llamas.",
+        "Your crafting table misses you.",
+        "Beware the Endermen!",
+        "You’re on thin ice... literally.",
+        "Don’t feed the trolls.",
+        "Noob alert!",
+        "Let chaos reign!",
+        "Powered by redstone!",
+        "Wasted!"
+      ];
+      const randomText = splashTexts[Math.floor(Math.random() * splashTexts.length)];
+      document.getElementById('welcome-banner').innerText = randomText;
+    });
+  </script>
 </body>
+
 </html>
