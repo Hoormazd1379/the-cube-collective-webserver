@@ -55,7 +55,7 @@ router.get("/dynmap", (req, res) => {
     console.log("URL = ",url);
     var options = {
         host: 'play.thecubecollective.net',
-        port: 6707,
+        port: 6361,
         path: url,
         method: req.method,
         headers: req.headers
@@ -85,7 +85,7 @@ router.get("/*", (req, res) => {
         console.log("URL = ",req.url);
         var options = {
             host: 'play.thecubecollective.net',
-            port: 6707,
+            port: 6361,
             path: req.url,
             method: req.method,
             headers: req.headers
