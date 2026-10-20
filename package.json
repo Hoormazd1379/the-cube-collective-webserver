@@ -6,6 +6,7 @@
   "author": "Hoormazd Pirayeshfar",
   "license": "MIT",
   "scripts": {
+    "test": "node --test test/*.test.js",
     "start": "node app.js",
     "dev": "nodemon app.js",
     "build": "webpack --mode=production",
@@ -27,6 +28,10 @@
     "yarn": "^1.22.19",
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.1"
+  },
+  "resolutions": {
+    "axios/form-data": "4.0.4",
+    "**/request/form-data": "2.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
