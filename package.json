@@ -42,7 +42,6 @@
     "css-loader": "^6.10.0",
     "ignore-emit-webpack-plugin": "^2.0.6",
     "mini-css-extract-plugin": "^2.8.1",
-    "node-sass": "^9.0.0",
     "nodemon": "^3.0.3",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
